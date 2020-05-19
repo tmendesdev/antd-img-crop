@@ -91,7 +91,7 @@ EasyCrop.propTypes = {
 const ImgCrop = (props) => {
   if (process.env.NODE_ENV !== 'production') deprecate(props);
 
-  const { aspect, shape, grid, zoom, rotate, beforeCrop, modalTitle, modalWidth, children } = props;
+  const { aspect, shape, grid, zoom, rotate, beforeCrop, modalTitle, modalWidth, children, btnOk, btnCancel } = props;
   const hasZoom = zoom === true;
   const hasRotate = rotate === true;
 
@@ -248,6 +248,8 @@ const ImgCrop = (props) => {
               onCancel={onClose}
               maskClosable={false}
               destroyOnClose
+              cancelText={btnCancel}
+              okText={btnOk}
             >
               <EasyCrop
                 src={src}
@@ -311,6 +313,8 @@ ImgCrop.propTypes = {
   rotate: t.bool,
   beforeCrop: t.func,
   modalTitle: t.string,
+  btnOk: t.string,
+  btnCancel: t.string,
   modalWidth: t.oneOfType([t.number, t.string]),
   children: t.node,
 };
@@ -322,6 +326,8 @@ ImgCrop.defaultProps = {
   zoom: true,
   rotate: false,
   modalTitle: MODAL_TITLE,
+  btnOk: "OK",
+  btnCancel: "Cancel",
   modalWidth: 520,
 };
 

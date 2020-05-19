@@ -7,6 +7,8 @@ export interface ImgCropProps {
   rotate?: boolean;
   beforeCrop?: (file: File, fileList: File[]) => boolean;
   modalTitle?: string;
+  btnOk?: string;
+  btnCancel?: string;
   modalWidth?: number | string;
 }
 declare const ImgCrop: React.FC<ImgCropProps>;
