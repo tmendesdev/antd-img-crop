@@ -43,6 +43,8 @@ const Demo = () => (
 | rotate     | `boolean`            | `false`        | Enable rotate for the image                                     |
 | beforeCrop | `function`           | -              | Called before the model open, if return `false`, it'll not open |
 | modalTitle | `string`             | `'Edit image'` | Title of the modal                                              |
+| btnOk      | `string`             | `'Ok'`         | Confirm button text                                             |
+| btnCancel  | `string`             | `'Cancel'`     | Cancel button text                                              |
 | modalWidth | `number` \| `string` | `520`          | Width of the modal in pixels or percentages                     |
 
 ## License
